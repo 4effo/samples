@@ -18,7 +18,7 @@
 		<layout class="org.apache.log4j.SimpleLayout" />
 	</appender>
 
-	<logger name="de.icw.rocheadapter">
+	<logger name="bg.siv.samples">
 		<level value="DEBUG" />
 	</logger>
 
