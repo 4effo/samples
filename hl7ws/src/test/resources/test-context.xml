@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- InterComponentWare AG 2011 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://cxf.apache.org/core"
+	xmlns:cxf-jaxws="http://cxf.apache.org/jaxws" xmlns:cxf-soap="http://cxf.apache.org/bindings/soap"
+	xmlns:cxf-wsa="http://cxf.apache.org/ws/addressing"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://cxf.apache.org/core 
+http://cxf.apache.org/schemas/core.xsd
+http://cxf.apache.org/jaxws 
+http://cxf.apache.org/schemas/jaxws.xsd
+http://cxf.apache.org/bindings/soap 
+http://cxf.apache.org/schemas/configuration/soap.xsd">
+
+	<cxf-jaxws:client id="obsResultClient"
+		serviceClass="bg.siv.samples.ws.hl7.ObservationResultPortType" 
+		address="http://localhost:9000/hl7app/ObservationResultConsumerService">
+		<cxf-jaxws:features>
+			<cxf-wsa:addressing />
+		</cxf-jaxws:features>
+		<cxf-jaxws:binding>
+			<cxf-soap:soapBinding version="1.2" />
+		</cxf-jaxws:binding>
+	</cxf-jaxws:client>
+
+</beans>
