@@ -1,6 +1,5 @@
-
-/hl7ws/.settings
-/hl7ws/.classpath
-/hl7ws/.project
-/hl7ws/target
+target
+.classpath
+.project
+.settings/
 /hl7ws/id_file
