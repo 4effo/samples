@@ -55,7 +55,8 @@ public class SampleRouteBuilderTest {
 				result.contains("|ACK^R01^ACK|"));
 	}
 
-	@Test
+    @Test
+    @Ignore
 	public void callv251Payload() throws IOException {
 		String testString = IOUtils.toString(getClass().getResourceAsStream(
 				"/samples/ORU_R01_2.5.1.txt"));
@@ -66,6 +67,7 @@ public class SampleRouteBuilderTest {
 	}
 
 	@Test
+    @Ignore
 	public void prefixedPayload() throws IOException {
 		String testString = "   \n\t\t"
 				+ IOUtils.toString(getClass().getResourceAsStream(
